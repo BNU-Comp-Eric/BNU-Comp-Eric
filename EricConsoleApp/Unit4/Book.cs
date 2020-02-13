@@ -5,7 +5,8 @@ using System.Text;
 namespace EricConsoleApp.Unit4
 {
     /// <summary>
-    /// This class ...
+    /// This class will write out a two chapter 
+    /// story for the user 
     /// 
     /// For Tasks 4.2 and 4.3 
     /// 
@@ -18,6 +19,12 @@ namespace EricConsoleApp.Unit4
 
         private string author, name, town;
         private string animal, weapon, job;
+
+        public Book()
+        {
+            author = SimpleIO.AUTHOR;
+            
+        }
 
         /// <summary>
         /// Prompt the user for an answer as a string and return it
@@ -38,12 +45,14 @@ namespace EricConsoleApp.Unit4
         /// </summary>
         public void GetDetails() // keep using ask() to get information
         {
-            author = GetString("Please type your name : ");
+            author = SimpleIO.AUTHOR;
             name = GetString("Please type a friend's name : ");
             town = GetString("Now give me the name of a town : ");
             animal = GetString("Now a type of animal : ");
             job = GetString("Now a type of job : ");
             weapon = GetString("And your weapon of choice : ");
+
+            
         }
 
         /// <summary>

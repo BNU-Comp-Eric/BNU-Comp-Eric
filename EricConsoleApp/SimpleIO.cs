@@ -9,9 +9,9 @@ namespace EricConsoleApp
     /// input and output using the Console
     /// Modified by : Eric Man
     /// </summary>
-    public class SimpleIO
+    static class SimpleIO
     {
-        public const string AUTHOR = "Derek Peacock";
+        public const string AUTHOR = "Eric Man";
 
         public static void WriteTitle(string title, string task)
         {
