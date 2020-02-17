@@ -19,11 +19,19 @@ namespace EricConsoleApp.Unit4
 
         private string author, name, town;
         private string animal, weapon, job;
+        private string gender, attack, body;
 
         public Book()
         {
             author = SimpleIO.AUTHOR;
-            
+            name = "Leon";
+            town = "Wycombe";
+            animal = "duck";
+            job = "programmer";
+            weapon = "chicken";
+            gender = "she";
+            attack = "hit";
+            body = "shoulder";
         }
 
         /// <summary>
@@ -51,8 +59,9 @@ namespace EricConsoleApp.Unit4
             animal = GetString("Now a type of animal : ");
             job = GetString("Now a type of job : ");
             weapon = GetString("And your weapon of choice : ");
-
-            
+            gender = GetString("What gender is your friend (he/she): ");
+            attack = GetString("What form of attack: ");
+            body = GetString("What part of the body was attacked: ");
         }
 
         /// <summary>
@@ -78,6 +87,7 @@ namespace EricConsoleApp.Unit4
         public void WriteChapter2()
         {
             Console.WriteLine("The " + job + " hit him with the " + weapon);
+            Console.WriteLine(name + " fell to the ground ");
         }
     }
 }
