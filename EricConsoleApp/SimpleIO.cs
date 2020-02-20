@@ -7,7 +7,6 @@ namespace EricConsoleApp
     /// <summary>
     /// This class will provide general methods to assist user
     /// input and output using the Console
-    /// Modified by : Eric Man
     /// </summary>
     static class SimpleIO
     {

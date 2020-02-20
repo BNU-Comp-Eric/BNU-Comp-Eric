@@ -21,6 +21,10 @@ namespace EricConsoleApp.Unit4
         private string animal, weapon, job;
         private string gender, attack, body;
 
+        /// <summary>
+        /// This method will initialise all the elements of the story
+        /// to default values
+        /// </summary>
         public Book()
         {
             author = SimpleIO.AUTHOR;
@@ -29,7 +33,7 @@ namespace EricConsoleApp.Unit4
             animal = "duck";
             job = "programmer";
             weapon = "chicken";
-            gender = "she";
+            gender = "he";
             attack = "hit";
             body = "shoulder";
         }
@@ -65,28 +69,34 @@ namespace EricConsoleApp.Unit4
         }
 
         /// <summary>
-        /// This method creates a the first chapter of a story using 
+        /// This method creates the first chapter of a story using 
         /// all the attributes of the class
         /// </summary>
         public void WriteChapter1()
         {
             Console.Clear();
 
-            Console.WriteLine("A Horror Story : by " + author);
-            Console.WriteLine("===============================");
+            SimpleIO.WriteTitle("Horror Story", "4.2");
 
             Console.WriteLine("It was a dark night in " + town + " and " + name
                 + " could hear " + animal + "s screaming in the distance.");
 
             Console.WriteLine(name + " staggered terrified through the streets of "
-                + town + ", realising he had been followed.");
+                + town + ", realising " + gender + " had been followed.");
 
             Console.WriteLine("In the shadow of a doorway, a demented " + job
                 + " waited, clutching a menacing " + weapon);
         }
+        /// <summary>
+        /// This method creates the second chapter of a story using 
+        /// all the attributes of the class
+        /// </summary>
         public void WriteChapter2()
         {
-            Console.WriteLine("The " + job + " hit him with the " + weapon);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("The " + job + " hit " + gender + " with the " + weapon);
             Console.WriteLine(name + " fell to the ground ");
         }
     }

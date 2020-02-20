@@ -12,8 +12,8 @@ namespace EricConsoleApp
         static void Main(string[] args)
         {
             //TestDistanceConverter(); // T4.1
-            TestBook(); // T4.2 and T4.3
-            //TestTournament();           // T5.1 and 5.3
+            //TestBook(); // T4.2 and T4.3
+            TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
             //TestMotelBooking();         // T5.6
             //TestSPS_Game();
@@ -30,7 +30,7 @@ namespace EricConsoleApp
 
             SimpleIO.WriteTitle("Horror Story", "Task 4.1");
 
-            book.GetDetails();
+            //book.GetDetails();
             book.WriteChapter1();
             book.WriteChapter2();
         }
@@ -48,7 +48,9 @@ namespace EricConsoleApp
         }
 
         /// <summary>
-        /// Task 5.1
+        /// Task 5.1 Create a new Tournament object
+        /// and get the scores for each player and
+        /// display them
         /// </summary>
         private static void TestTournament()
         {

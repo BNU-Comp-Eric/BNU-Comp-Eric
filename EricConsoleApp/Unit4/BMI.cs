@@ -11,14 +11,20 @@ namespace EricConsoleApp.Unit4
     /// </summary>
     class BMI
     {
-       
-        private double kg, height;
-        public double GetDetails(string prompt)
-        {
-            kg = SimpleIO.GetDouble("Please enter your weight");
-            height = SimpleIO.GetDouble("Please enter your height");
-            return;
-        }
 
+        /// <summary>
+        /// This method will ask the user to enter their
+        /// weight in kg and their height in metres
+        /// </summary>
+        /*public double GetDetails(string prompt)
+        {
+            double kg, height;
+            string input;
+
+            kg = SimpleIO.GetDouble("Please enter your weight " + prompt );
+
+            height = SimpleIO.GetDouble("Please enter your height");
+            
+        }*/
     }
 }

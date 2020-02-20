@@ -36,7 +36,6 @@ namespace EricConsoleApp.Unit5
             int songNo = SimpleIO.GetInt("Enter song no: ");
         }
 
-
         public void ShowVotes()
         {
 
