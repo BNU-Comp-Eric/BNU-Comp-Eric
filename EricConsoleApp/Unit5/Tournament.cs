@@ -14,7 +14,7 @@ namespace EricConsoleApp.Unit5
     /// </summary>
     public class Tournament
     {
-        public const int MAXN_SCORES = 6;
+        public const int MAXN_SCORES = 9;
 
         // Another way of initialising attributes
         private int[] scores;
@@ -40,7 +40,10 @@ namespace EricConsoleApp.Unit5
                 "Gita"
             };
         }
-
+        /// <summary>
+        /// This method will ask the user to 
+        /// enter a score for each player 
+        /// </summary>
         public void GetScores()
         {
             SimpleIO.WriteTitle("Enter Tournament Scores", "Task 5.1");
@@ -52,6 +55,28 @@ namespace EricConsoleApp.Unit5
             }
         }
 
+        /// <summary>
+        /// This method will ask the user
+        /// for the names of players and 
+        /// their scores
+        /// </summary>
+        public void GetDetails()
+        {
+            SimpleIO.WriteTitle("Enter Tournament Scores", "Task 5.1");
+
+            for (int i = 0; i < MAXN_SCORES; i++)
+            {
+                Console.Write("Enter player name " + (i + 1) + "> ");
+                names[i] = Console.ReadLine();
+
+                Console.Write("Enter score for player " + (i + 1) + " > ");
+                scores[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        /// <summary>
+        /// This method will show the players' scores
+        /// </summary>
         public void ShowScores()
         {
             SimpleIO.WriteTitle("Show Tournament Scores", "Task 5.1");
@@ -59,6 +84,20 @@ namespace EricConsoleApp.Unit5
             for (int i = 0; i < MAXN_SCORES; i++)
             {
                 Console.WriteLine("Player " + (i + 1) + " scored " + scores[i]);
+            }
+        }
+
+        /// <summary>
+        /// This method will show the names
+        /// of players and their scores
+        /// </summary>
+        public void ShowDetails()
+        {
+            SimpleIO.WriteTitle("Show Tournament Scores", "Task 5.1");
+
+            for (int i = 0; i < MAXN_SCORES; i++)
+            {
+                Console.WriteLine("Player " + names[1] + " scored " + scores[i]);
             }
         }
     }

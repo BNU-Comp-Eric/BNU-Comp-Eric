@@ -43,7 +43,15 @@ namespace EricConsoleApp
             MP3Chart chart = new MP3Chart();
 
             chart.ShowSongs();
-            chart.GetVotes();
+
+            bool finish = false;
+
+            while (!finish)
+            {
+                int songNo = chart.GetVotes();
+                if (songNo == 0) finish = true;
+            }
+            
             chart.ShowVotes();
         }
 
@@ -56,9 +64,9 @@ namespace EricConsoleApp
         {
             Tournament tournament = new Tournament();
 
-            tournament.GetScores();
+            tournament.GetDetails();
 
-            tournament.ShowScores();
+            tournament.ShowDetails();
         }
 
         /// <summary>
