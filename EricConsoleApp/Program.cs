@@ -41,7 +41,7 @@ namespace EricConsoleApp
             BMI bmi = new BMI();
 
             bmi.GetDetails();
-            bmi.CalcBMI();
+            bmi.CalculateBMI();
         }
 
         /// <summary>

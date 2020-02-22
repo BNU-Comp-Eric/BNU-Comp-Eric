@@ -18,6 +18,8 @@ namespace EricConsoleApp.Unit4
         /// </summary>
         public void GetDetails()
         {
+            SimpleIO.WriteTitle("Body Mass Index Calculator", "4.4");
+
             Console.WriteLine("Please enter your weight (kg):");
             kg = Convert.ToDouble(Console.ReadLine());
 
@@ -33,7 +35,7 @@ namespace EricConsoleApp.Unit4
         /// display their BMI and tell them if they're
         /// under, normal or overweight.
         /// </summary>
-        public void CalcBMI()
+        public void CalculateBMI()
         {
            double BMI = kg / (height * height);
 
