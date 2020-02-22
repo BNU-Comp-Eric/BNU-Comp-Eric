@@ -13,7 +13,8 @@ namespace EricConsoleApp
         {
             //TestDistanceConverter(); // T4.1
             //TestBook(); // T4.2 and T4.3
-            TestTournament();           // T5.1 and 5.3
+            TestBMI(); // T4.4
+            //TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
             //TestMotelBooking();         // T5.6
             //TestSPS_Game();
@@ -33,6 +34,14 @@ namespace EricConsoleApp
             //book.GetDetails();
             book.WriteChapter1();
             book.WriteChapter2();
+        }
+
+        private static void TestBMI()
+        {
+            BMI bmi = new BMI();
+
+            bmi.GetDetails();
+            bmi.CalcBMI();
         }
 
         /// <summary>
