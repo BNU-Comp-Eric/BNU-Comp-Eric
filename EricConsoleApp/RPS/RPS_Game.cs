@@ -41,11 +41,15 @@ namespace EricConsoleApp.RPSGame
 
         private Random randomGenerator = new Random(123);
 
-      
+
         public void Start(string player)
         {
             PlayerName = player;
             WinnerName = "Unkown";
+
+            PlayerScore = 0;
+            ComputerScore = 0;
+
         }
 
         /// <summary>
@@ -58,9 +62,9 @@ namespace EricConsoleApp.RPSGame
         }
 
         /// <summary>
-        /// *******************************************************
-        /// 
-        /// *******************************************************
+        /// This method will get the 
+        /// computer's choice of rock,
+        /// paper and scissors
         /// </summary>
         public void GetComputerChoice()
         {

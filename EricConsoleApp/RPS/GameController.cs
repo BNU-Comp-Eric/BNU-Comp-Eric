@@ -22,6 +22,9 @@ namespace EricConsoleApp.RPSGame
 
         private int turn;
 
+        /// <summary>
+        /// This method will run the game 
+        /// </summary>
         public void RunGame()
         {
             SetupScreen();
@@ -31,7 +34,7 @@ namespace EricConsoleApp.RPSGame
             {
                 GetPlayerChoice();
                 //game.GetComputerChoice();
-                game.ComputerChoice = RPS_Choices.PAPER;
+                game.ComputerChoice = RPS_Choices.SCISSORS;
 
                 ShowChoices();
 
@@ -61,7 +64,9 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will ask the user
+        /// for their choice of input from 
+        /// rock 1, paper 2 or scissors 3
         /// *******************************************************
         /// </summary>
         private void GetPlayerChoice()
@@ -134,7 +139,8 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will display the player and computer's 
+        /// choice
         /// *******************************************************
         /// </summary>
         private void ShowChoices()
@@ -149,7 +155,8 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will display the player's and computer's 
+        /// current score results
         /// *******************************************************
         /// </summary>
         private void ShowResult()
@@ -166,7 +173,7 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will set up the screen
         /// *******************************************************
         /// </summary>
         private void SetupScreen()
@@ -184,7 +191,8 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will start the game and 
+        /// output the title 
         /// *******************************************************
         /// </summary>
         private void StartGame()
