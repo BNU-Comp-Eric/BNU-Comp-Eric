@@ -21,7 +21,7 @@ namespace EricConsoleApp.RPSGame
     }
 
     /// <summary>
-    /// This class plays ...
+    /// This class plays the game
     /// Author: Derek
     /// Started: 12/02/2019
     /// Modified : 26/02/2020
@@ -37,7 +37,7 @@ namespace EricConsoleApp.RPSGame
         public RPS_Choices ComputerChoice { get; set; }
         public RPS_Choices PlayerChoice { get; set; }
 
-        private Random randomGenerator = new Random();
+        private Random randomGenerator = new Random(123);
 
         public void Start(string player)
         {
@@ -66,6 +66,14 @@ namespace EricConsoleApp.RPSGame
 
             if (choice == 0)
             {
+                ComputerChoice = RPS_Choices.ROCK;
+            }
+            else if (choice == 1)
+            {
+                ComputerChoice = RPS_Choices.PAPER;
+            }
+            else if (choice == 2)
+            {
                 ComputerChoice = RPS_Choices.SCISSORS;
             }
             else
@@ -77,20 +85,40 @@ namespace EricConsoleApp.RPSGame
 
         /// <summary>
         /// *******************************************************
-        /// 
+        /// This method will determine whether the computer
+        /// has won, or the player has won, or it is a draw.
         /// *******************************************************
         /// </summary>
         public void WorkoutWinner()
         {
-            if (PlayerChoice == ComputerChoice)
+           if (PlayerChoice == RPS_Choices.ROCK && ComputerChoice == RPS_Choices.SCISSORS)
+            {
+                WinnerName = PlayerName;
+            }
+            else if (PlayerChoice == RPS_Choices.PAPER && ComputerChoice == RPS_Choices.ROCK)
+            {
+                WinnerName = PlayerName;
+            }
+            else if (PlayerChoice == RPS_Choices.SCISSORS && ComputerChoice == RPS_Choices.PAPER)
+            {
+                WinnerName = PlayerName;
+            }
+            else if (PlayerChoice == RPS_Choices.PAPER && ComputerChoice == RPS_Choices.SCISSORS)
+            {
+                WinnerName = COMPUTER_NAME;
+            }
+            else if (PlayerChoice == RPS_Choices.ROCK && ComputerChoice == RPS_Choices.PAPER)
+            {
+                WinnerName = COMPUTER_NAME;
+            }
+            else if (PlayerChoice == RPS_Choices.SCISSORS && ComputerChoice == RPS_Choices.ROCK)
+            {
+                WinnerName = COMPUTER_NAME;
+            }
+            else 
             {
                 WinnerName = "You have Drawn!!!";
             }
-            else
-            {
-                WinnerName = "Not Yet Determined!!!";
-            }
-
         }
     }
 }

@@ -24,7 +24,7 @@ namespace EricConsoleApp
         private static void TestRPS_Game()
         {
             GameController controller = new GameController();
-
+            controller.RunGame();
         }
 
         /// <summary>

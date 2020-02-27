@@ -4,9 +4,13 @@ using System.Text;
 
 namespace EricConsoleApp.RPSGame
 {
+    /// <summary>
+    /// This Class will control the
+    /// input and output of the game
+    /// </summary>
     public class GameController
     {
-        public static string Title = "Scissors-Paper-Stone Game";
+        public static string Title = "Rock-Paper-Scissors Game";
 
         public const string ROCK = "ROCK";
         public const string PAPER = "PAPER";
@@ -169,8 +173,8 @@ namespace EricConsoleApp.RPSGame
             Console.SetWindowSize(100, 36);
             Console.SetBufferSize(100, 36);
 
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
 
             Console.Clear();  // clear screen in chosen colour
         }
@@ -183,7 +187,7 @@ namespace EricConsoleApp.RPSGame
         private void StartGame()
         {
             SimpleIO.WriteTitle(Title, "Week 3");
-            game.Start("Derek");
+            game.Start("Eric");
         }
     }
 }
