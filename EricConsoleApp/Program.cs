@@ -1,6 +1,7 @@
 ﻿using System;
 using EricConsoleApp.Unit4;
 using EricConsoleApp.Unit5;
+using EricConsoleApp.RPSGame;
 
 namespace EricConsoleApp
 {
@@ -13,11 +14,17 @@ namespace EricConsoleApp
         {
             //TestDistanceConverter(); // T4.1
             //TestBook(); // T4.2 and T4.3
-            TestBMI(); // T4.4
+            //TestBMI(); // T4.4
             //TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
             //TestMotelBooking();         // T5.6
-            //TestSPS_Game();
+            TestRPS_Game();
+        }
+
+        private static void TestRPS_Game()
+        {
+            GameController controller = new GameController();
+
         }
 
         /// <summary>
@@ -61,6 +68,7 @@ namespace EricConsoleApp
                 if (songNo == 0) finish = true;
             }
             
+
             chart.ShowVotes();
         }
 
@@ -163,6 +171,8 @@ namespace EricConsoleApp
                     break;
             }
         }
+
+      
 
     }
 }

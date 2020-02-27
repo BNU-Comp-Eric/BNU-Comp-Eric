@@ -33,6 +33,12 @@ namespace EricConsoleApp.Unit5
             };
         }
 
+        /// <summary>
+        /// This method will ask the user to 
+        /// vote for their choice of songs 
+        /// from the UK top 10 chart singles
+        /// </summary>
+        /// <returns></returns>
         public int GetVotes()
         {
             SimpleIO.WriteTitle("Vote for UK Top 10 Chart Singles", "Task 5.2");
@@ -45,6 +51,11 @@ namespace EricConsoleApp.Unit5
             return songNo;
         }
 
+        /// <summary>
+        /// This method will show the 
+        /// number of votes each song 
+        /// has aquired from the users' votes
+        /// </summary>
         public void ShowVotes()
         {
             SimpleIO.WriteTitle("UK Top 10 Chart Singles", "Task 5.2");
@@ -60,6 +71,10 @@ namespace EricConsoleApp.Unit5
             }
         }
 
+        /// <summary>
+        /// This method will show the 
+        /// position 
+        /// </summary>
         public void ShowSongs()
         {
             SimpleIO.WriteTitle("UK Top 10 Chart Singles", "Task 5.2");
