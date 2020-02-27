@@ -30,7 +30,8 @@ namespace EricConsoleApp.RPSGame
             for (turn = 1; turn <= MAXN_TURNS; turn++)
             {
                 GetPlayerChoice();
-                game.GetComputerChoice();
+                //game.GetComputerChoice();
+                game.ComputerChoice = RPS_Choices.PAPER;
 
                 ShowChoices();
 
@@ -98,7 +99,6 @@ namespace EricConsoleApp.RPSGame
         /// either the computer, or the player.  The player's
         /// choice is drawn at (x = 5, y = 14) and the computers 
         /// choice at (x = 50, y = 14)
-        /// FIND THE SINGLE MISTAKE!!!
         /// </summary>
         private void DrawChoice(RPS_Players player)
         {
@@ -109,7 +109,7 @@ namespace EricConsoleApp.RPSGame
 
             if (player == RPS_Players.COMPUTER)
             {
-                x = 5;
+                x = 55;
                 choice = game.ComputerChoice;
             }
             else
@@ -154,6 +154,9 @@ namespace EricConsoleApp.RPSGame
         /// </summary>
         private void ShowResult()
         {
+            Console.WriteLine("\tThe Players score = " + game.PlayerScore);
+            Console.WriteLine("\tThe Computer score = " + game.ComputerScore);
+           
             Console.WriteLine("\tThe current winner is the " + game.WinnerName);
             Console.WriteLine();
             Console.WriteLine("\tThe player has won ");
