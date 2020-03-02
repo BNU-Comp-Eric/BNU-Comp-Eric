@@ -135,5 +135,30 @@ namespace EricConsoleApp.RPSGame
                 PlayerScore++;
             }
         }
+        
+        /// <summary>
+        /// This method will compare the scores
+        /// and output the winner, either the 
+        /// player or computer, and draw thumbs up 
+        /// or down, or a smile.
+        /// </summary>
+        public void OverallWinner()
+        {
+            if (PlayerScore > ComputerScore)
+            {
+                Console.WriteLine("The winner is " + PlayerName);
+                Images.DrawThumbsUp();
+            }
+            else if (ComputerScore > PlayerScore)
+            {
+                Console.WriteLine("The winner is " + COMPUTER_NAME);
+                Images.DrawThumbsDown();
+            }
+            else
+            {
+                Console.WriteLine("It's a draw");
+                Images.DrawSmile();
+            }
+        }
     }
 }

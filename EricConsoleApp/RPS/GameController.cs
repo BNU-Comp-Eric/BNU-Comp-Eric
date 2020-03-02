@@ -52,14 +52,16 @@ namespace EricConsoleApp.RPSGame
         }
 
         /// <summary>
-        /// 
+        /// This method will end the game
+        /// and clear the screen and display
+        /// the overall winner of the game
         /// </summary>
         private void EndGame()
         {
             Console.Clear();
             SimpleIO.WriteTitle(Title, "Week 3");
 
-            Console.WriteLine("The overall winner is " + game.WinnerName);
+            game.OverallWinner();
         }
 
         /// <summary>
@@ -198,7 +200,9 @@ namespace EricConsoleApp.RPSGame
         private void StartGame()
         {
             SimpleIO.WriteTitle(Title, "Week 3");
-            game.Start("Eric");
+            Console.WriteLine("What is your name?");
+            string userName = Console.ReadLine();
+            game.Start(userName);
         }
     }
 }
