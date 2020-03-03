@@ -18,7 +18,17 @@ namespace EricConsoleApp
             //TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
             //TestMotelBooking();         // T5.6
-            TestRPS_Game();
+            //TestRPS_Game();
+            TestSort();     // T5.4
+        }
+
+        private static void TestSort()
+        {
+            Bubble NSort = new Bubble();
+
+            NSort.InputNumbers();
+            NSort.Display();
+            NSort.SortNumbers();
         }
 
         private static void TestRPS_Game()
