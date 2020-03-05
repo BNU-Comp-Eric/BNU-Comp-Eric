@@ -156,7 +156,7 @@ namespace EricConsoleApp
 
             SimpleIO.WriteTitle("The Bates Motel", "Task 5.6");
             motel.RunMotel();
-
+           
             Console.ReadKey();
         }
     }

@@ -29,19 +29,17 @@ namespace EricConsoleApp.RPSGame
     public class RPS_Game
     {
         public const string COMPUTER_NAME = "Computer";
-
         public int ComputerScore { get; set; }
         public int PlayerScore { get; set; }
         public string PlayerName { get; set; }
-
         public string WinnerName { get; set; }
-
         public RPS_Choices ComputerChoice { get; set; }
         public RPS_Choices PlayerChoice { get; set; }
-
         private Random randomGenerator = new Random(123);
 
-
+        /// <summary>
+        /// This method will 
+        /// </summary>
         public void Start(string player)
         {
             PlayerName = player;
@@ -49,7 +47,6 @@ namespace EricConsoleApp.RPSGame
 
             PlayerScore = 0;
             ComputerScore = 0;
-
         }
 
         /// <summary>

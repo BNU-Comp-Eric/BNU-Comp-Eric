@@ -12,7 +12,7 @@ namespace EricConsoleApp.Unit5
         private int roomNumber, guests;
         private static int roomsBooked = 0, totalGuests = 0;
 
-        public void Motel()
+        public BatesMotel()
         {
             rooms = new int[MAXN_ROOMS + 1];
         }
@@ -29,6 +29,7 @@ namespace EricConsoleApp.Unit5
             do
             {
                 Console.Clear();
+                SimpleIO.WriteTitle("Bates Motel", "Task 5.6");
                 Console.WriteLine("The Bates Motel");
                 Console.WriteLine("===================");
                 Console.WriteLine("1. Book a room");
@@ -65,6 +66,7 @@ namespace EricConsoleApp.Unit5
         /// </summary>
         public void BookRoom()
         {
+            SimpleIO.WriteTitle("Bates Motel", "Task 5.6");
             Console.WriteLine("\nThe Bates Motel");
             Console.WriteLine("=================");
             Console.WriteLine("Book a room");
@@ -78,11 +80,9 @@ namespace EricConsoleApp.Unit5
                     Console.WriteLine("Sorry this Room is already booked");
                     Console.Write("\nPlease pick a different Room : ");
                 }
-            }
-            while (rooms[roomNumber] != 0);
+            } while (rooms[roomNumber] != 0);
 
             Console.Write("How many guests : ");
-
             do
             {
                 guests = Convert.ToInt32(Console.ReadLine());
@@ -105,9 +105,9 @@ namespace EricConsoleApp.Unit5
         /// </summary>
         public void ShowAllRooms()
         {
+            SimpleIO.WriteTitle("Bates Motel", "Task 5.6");
             Console.WriteLine("Bates Motel Room Status");
             Console.WriteLine("=======================");
-
             for (int i = 1; i < MAXN_ROOMS + 1; i++)
             {
                 Console.WriteLine("Room " + i + "\t" + rooms[i] + " guests");
@@ -121,12 +121,14 @@ namespace EricConsoleApp.Unit5
         /// </summary>
         public void VacateOneRoom()
         {
+            SimpleIO.WriteTitle("Bates Motel", "Task 5.6");
             Console.Write("Which Room would you like to vacate: ");
             roomNumber = Convert.ToInt32(Console.ReadLine());
             totalGuests -= rooms[roomNumber];
             rooms[roomNumber] = 0;
             Console.Write("Room " + roomNumber + " has been vacated");
             roomsBooked -= 1;
+
             Console.ReadKey();
         }
 
@@ -136,10 +138,10 @@ namespace EricConsoleApp.Unit5
         /// </summary>
         public void VacateAllRooms()
         {
+            SimpleIO.WriteTitle("Bates Motel", "Task 5.6");
             Array.Clear(rooms, 0, rooms.Length);
 
             Console.WriteLine("All rooms have been vacated!");
         }
-   
     }
 }

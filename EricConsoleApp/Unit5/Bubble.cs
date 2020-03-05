@@ -41,10 +41,9 @@ namespace EricConsoleApp.Unit5
             for (int i = 0; i < answer.Length; i++)
             {
                 Console.WriteLine("Numbers " + answer[i]);
-
             }
-            Console.ReadLine();
 
+            Console.ReadLine();
         }
 
         /// <summary>
@@ -75,7 +74,6 @@ namespace EricConsoleApp.Unit5
                 Console.Write("\t {0}", num);
             }
             Console.ReadLine();
-
         }
     }
 }
