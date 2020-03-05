@@ -15,14 +15,16 @@ namespace EricConsoleApp
             //TestDistanceConverter(); // T4.1
             //TestBook(); // T4.2 and T4.3
             //TestBMI(); // T4.4
+
             //TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
-            //TestMotelBooking();         // T5.6
+            //TestBubbleSort();     // T5.4
+            TestMotelBooking();         // T5.6
             //TestRPS_Game();
-            TestSort();     // T5.4
+            
         }
 
-        private static void TestSort()
+        private static void TestBubbleSort()
         {
             Bubble NSort = new Bubble();
 
@@ -143,12 +145,6 @@ namespace EricConsoleApp
                 
             } while (choice != 3);
 
-
-
-
-
-
-
         }
 
         /// <summary>
@@ -159,31 +155,10 @@ namespace EricConsoleApp
             BatesMotel motel = new BatesMotel();
 
             SimpleIO.WriteTitle("The Bates Motel", "Task 5.6");
+            motel.RunMotel();
 
-            string[] choices =
-            {
-                "1. Book a Room",
-                "2. Vacate a Room",
-                "3. Display All Rooms",
-                "4. Vacate All Rooms",
-                "5. Quit"
-            };
-
-            int choice = SimpleIO.GetChoice(choices);
-
-            switch (choice)
-            {
-                case 1:
-                    //motel.Book(1, 2);
-                    break;
-
-                default:
-                    break;
-            }
+            Console.ReadKey();
         }
-
-      
-
     }
 }
 

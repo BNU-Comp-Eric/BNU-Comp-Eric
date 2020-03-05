@@ -15,8 +15,6 @@ namespace EricConsoleApp.Unit5
     public class Tournament
     {
         public const int MAXN_SCORES = 9;
-
-        // Another way of initialising attributes
         private int[] scores;
 
         private string[] names;
