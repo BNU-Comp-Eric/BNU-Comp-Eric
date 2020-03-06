@@ -9,6 +9,9 @@ namespace EricConsoleApp.Unit5
         int[] answer = new int[20];
         bool flag = true;
         int temp;
+        string[] arr1;
+        string temp1;
+        int n, i, j;
 
         /// <summary>
         /// This method will ask the user 
@@ -30,7 +33,7 @@ namespace EricConsoleApp.Unit5
         /// This method will display the
         /// the numbers one above another
         /// </summary>
-        public void Display()
+        public void DisplayNumbers()
         {
             Console.Clear();
             SimpleIO.WriteTitle("Bubble Sort", "Task 5.4");

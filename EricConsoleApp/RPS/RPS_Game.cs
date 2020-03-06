@@ -86,7 +86,6 @@ namespace EricConsoleApp.RPSGame
             }
         }
 
-
         /// <summary>
         /// *******************************************************
         /// This method will determine whether the computer

@@ -64,7 +64,6 @@ namespace EricConsoleApp.Unit5
 
             foreach (string song in chart)
             {
-                
                 Console.Write("Song " + (index + 1) + " is " + song);
                 Console.WriteLine(" No. of votes is " + votes[index]);
                 index++;
@@ -78,9 +77,7 @@ namespace EricConsoleApp.Unit5
         public void ShowSongs()
         {
             SimpleIO.WriteTitle("UK Top 10 Chart Singles", "Task 5.2");
-
             int position = 0;
-
             foreach (string song in chart)
             {
                 position++;

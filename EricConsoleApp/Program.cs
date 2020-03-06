@@ -16,10 +16,10 @@ namespace EricConsoleApp
             //TestBook(); // T4.2 and T4.3
             //TestBMI(); // T4.4
 
-            //TestTournament();           // T5.1 and 5.3
+            TestTournament();           // T5.1 and 5.3
             //TestSongs();                // T5.2
-            //TestBubbleSort();     // T5.4
-            TestMotelBooking();         // T5.6
+            //TestBubbleSort();             // T5.4
+            //TestMotelBooking();         // T5.6
             //TestRPS_Game();
             
         }
@@ -29,7 +29,7 @@ namespace EricConsoleApp
             Bubble NSort = new Bubble();
 
             NSort.InputNumbers();
-            NSort.Display();
+            NSort.DisplayNumbers();
             NSort.SortNumbers();
         }
 
@@ -46,8 +46,6 @@ namespace EricConsoleApp
         private static void TestBook()
         {
             Book book = new Book();
-            
-
             SimpleIO.WriteTitle("Horror Story", "Task 4.1");
 
             //book.GetDetails();
@@ -79,7 +77,6 @@ namespace EricConsoleApp
                 int songNo = chart.GetVotes();
                 if (songNo == 0) finish = true;
             }
-            
 
             chart.ShowVotes();
         }
@@ -94,7 +91,6 @@ namespace EricConsoleApp
             Tournament tournament = new Tournament();
 
             tournament.GetDetails();
-
             tournament.ShowDetails();
         }
 
@@ -108,9 +104,7 @@ namespace EricConsoleApp
             double feet = 0;
 
             Console.WriteLine("Eric's Distance Converter");
-
             DistanceConverter converter = new DistanceConverter();
-
             int choice = 3;
 
             string[] choices = new string[]
@@ -119,7 +113,6 @@ namespace EricConsoleApp
                 "2. Convert Feet to Miles",
                 "3. Quit Test"
             };
-
             do
             {
                 choice = SimpleIO.GetChoice(choices);
@@ -141,10 +134,7 @@ namespace EricConsoleApp
                     Console.WriteLine("The no. of feet = " + feet);
                     Console.WriteLine("The no. of miles = " + miles);
                 }
-
-                
             } while (choice != 3);
-
         }
 
         /// <summary>

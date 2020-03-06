@@ -25,7 +25,6 @@ namespace EricConsoleApp.Unit4
 
             Console.WriteLine("Please enter your height (m): ");
             height = Convert.ToDouble(Console.ReadLine());
-
         }
 
         /// <summary>

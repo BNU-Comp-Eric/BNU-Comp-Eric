@@ -16,7 +16,6 @@ namespace EricConsoleApp.Unit5
     {
         public const int MAXN_SCORES = 9;
         private int[] scores;
-
         private string[] names;
 
         /// <summary>
@@ -37,20 +36,6 @@ namespace EricConsoleApp.Unit5
                 "Liam",
                 "Gita"
             };
-        }
-        /// <summary>
-        /// This method will ask the user to 
-        /// enter a score for each player 
-        /// </summary>
-        public void GetScores()
-        {
-            SimpleIO.WriteTitle("Enter Tournament Scores", "Task 5.1");
-
-            for (int i = 0; i < MAXN_SCORES; i++)
-            {
-                Console.Write("Enter score for player " + (i + 1) + " > ");
-                scores[i] = Convert.ToInt32(Console.ReadLine());
-            }
         }
 
         /// <summary>
@@ -73,19 +58,6 @@ namespace EricConsoleApp.Unit5
         }
 
         /// <summary>
-        /// This method will show the players' scores
-        /// </summary>
-        public void ShowScores()
-        {
-            SimpleIO.WriteTitle("Show Tournament Scores", "Task 5.1");
-
-            for (int i = 0; i < MAXN_SCORES; i++)
-            {
-                Console.WriteLine("Player " + (i + 1) + " scored " + scores[i]);
-            }
-        }
-
-        /// <summary>
         /// This method will show the names
         /// of players and their scores
         /// </summary>
@@ -95,7 +67,7 @@ namespace EricConsoleApp.Unit5
 
             for (int i = 0; i < MAXN_SCORES; i++)
             {
-                Console.WriteLine("Player " + names[1] + " scored " + scores[i]);
+                Console.WriteLine("Player " + names[i] + " scored " + scores[i]);
             }
         }
     }

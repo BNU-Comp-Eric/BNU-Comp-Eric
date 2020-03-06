@@ -19,7 +19,6 @@ namespace EricConsoleApp.Unit4
         public double ToFeet(double miles)
         {
             return miles * 1760.00 * 3;
-
         }
 
         /// <summary>
@@ -30,7 +29,6 @@ namespace EricConsoleApp.Unit4
         public double ToMiles(double feet)
         {
             return feet / (1760.00 * 3);
-
         }
 
         /// <summary>
